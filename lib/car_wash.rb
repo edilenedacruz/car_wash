@@ -26,7 +26,8 @@ class CarWash
 
   def years_open
     @years_open = Time.now.year - opening_year
-    return "I am #{@years_open} years old."
+    # return "I am #{@years_open} years old." # => You don't actually need the 'return' here. The method will return the last value, the string you provide
+    # return is helpful if you want to stop progressing through a method in a given scenario (return "done" if result == "end")
+    "I am #{@years_open} years old."
   end
-
 end
